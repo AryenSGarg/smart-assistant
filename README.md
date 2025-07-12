@@ -26,9 +26,28 @@ A local GenAI assistant to read and understand research papers, legal docs, and 
 ## 🛠️ Setup Instructions
 
 ```bash
-git clone https://github.com/<your-username>/smart-research-assistant.git
-cd smart-research-assistant
+git clone https://github.com/AryenSGarg/smart-assistant.git
+cd smart-assistant
 python -m venv venv
 source venv/Scripts/activate       # or source venv/bin/activate on Mac/Linux
 pip install -r requirements.txt
 streamlit run app.py
+
+---
+
+## 📂 File Structure
+
+
+smart-assistant/
+├── app.py
+├── requirements.txt
+├── .gitignore
+├── README.md
+├── postman_collection.json
+│
+├── utils/
+│   └── utils.py
+│
+├── assets/
+│   └── ai_ethics.txt
+
