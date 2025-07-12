@@ -106,6 +106,8 @@ smart-assistant/
 │
 ├── assets/
 │   └── ai_ethics.txt
+
+
+
 👨‍💻 Built by Aryen Garg
 📧 aryengarg58@gmail.com
-🔗 LinkedIn
