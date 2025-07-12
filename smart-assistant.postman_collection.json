@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "Smart Assistant API",
+    "_postman_id": "b64336b5-9d4a-4d64-8c90-5deffde39a4c",
+    "description": "Postman collection for summarizing, Q&A, and logic challenges using FastAPI.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Summarize Document",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/summarize",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["summarize"]
+        }
+      }
+    },
+    {
+      "name": "Ask a Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "question",
+              "value": "What are the ethical issues discussed in this document?",
+              "type": "text"
+            },
+            {
+              "key": "context",
+              "value": "Paste document content here...",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/ask",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["ask"]
+        }
+      }
+    },
+    {
+      "name": "Generate Logic-Based Questions (Challenge)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "context",
+              "value": "Paste the document content here...",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/challenge",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["challenge"]
+        }
+      }
+    }
+  ]
+}

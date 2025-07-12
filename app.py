@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import handle_pdf, summarize, build_vectorstore, answer_question, generate_challenges
+from utils.utils import handle_pdf, summarize, build_vectorstore, answer_question, generate_challenges
 
 st.set_page_config(page_title="📚 Smart Research Assistant", layout="wide")
 st.title("📖 Smart Research Summarizer Assistant (Offline Mode)")
@@ -28,6 +28,7 @@ if uploaded_file:
                 st.markdown(f"**Answer:** {answer}")
                 st.caption("📌 Supporting context:")
                 st.code(justification, language='markdown')
+            
 
         elif mode == "Challenge Me":
             if st.button("Generate Questions"):
